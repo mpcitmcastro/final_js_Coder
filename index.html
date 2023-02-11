@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MPCIT - ILUMINACION</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src=img/LogoDistribuidora_MPCIT_Gris_1200x373_Centrado.jpg >
+      </div>
+      <!--<h1>MPCIT - ILUMINACION</h1>-->
+      <!-- Esto Lo debo, tengo que filtrar por nombre, un LIKE, de los viejos, ya voy a hacer.-->
+      <input
+        type="search"
+        placeholder=" Filtrar por Nombre "
+        id="buscarProducto"
+      />
+      <button id="cesta-carrito">
+        <i class="fas fa-shopping-cart"><span id="contador-carrito">0</span></i>
+      </button>
+    </header>
+
+    <main id="contenedor-productos"></main>
+
+    <!-- Mi idea es hacerlo por familias, o mejor dicho, que el Index tenga las familias
+         pero lo hago primero por productos finales. Las familias deberia llamar a otro con los productos-->
+
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="btn-cerrar-carrito">
+          <i class="fas fa-times-circle"></i>
+        </button>
+        <div id="carrito-contenedor"></div>
+        <p class="precioProducto">
+          Precio total: $<span id="precioTotal"></span>
+        </p>
+        <button id="vaciar-carrito" class="botton-vaciar">
+          <i class="fas fa-shopping-cart"></i> Vaciar Carrito
+        </button>
+        <button id="finalizar-compra" class="botton-finalizar">
+          <i class="fas fa-shopping-cart"></i> Finalizar Compra
+        </button>
+      </div>
+    </div>
+
+    <!-- Aunque esta mal ordenado, lo hago asi (deberia estar en carpetas cargados)-->
+
+    <script src="getData.js" type="module"></script>
+    <script src="productos.js" type="module"></script>
+    <script src="App.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <script src="modal.js" type="module"></script>
+    <script src="carritoIndex.js" type="module"></script>
+    <script src="actualizarCarrito.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/df59baf6b8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
